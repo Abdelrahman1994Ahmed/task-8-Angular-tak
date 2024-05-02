@@ -1,0 +1,11 @@
+<div class="container d-flex">
+    <div class="card m-3" style="width: 18rem;" *ngFor="let item of products">
+        <img [src]="item.img" class="card-img-top imgstl" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.desc}}</p>
+            <p class="card-text">{{item.price}}</p>            
+            <button href="#" class="btn btn-primary" (click)="changetext(item.title,item.price)">{{textins}}</button>
+        </div>
+    </div>
+</div>
