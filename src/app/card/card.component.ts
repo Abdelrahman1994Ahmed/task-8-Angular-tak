@@ -22,4 +22,5 @@ export class CardComponent {
     this.textins = 'done and done'
   }
 
+  
 }

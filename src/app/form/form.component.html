@@ -1,0 +1,24 @@
+<input type="text" placeholder="Enter name" [(ngModel)]="myname">
+<button (click)="change()"> Click here</button>
+
+<button (click)="show()">show</button>
+<p *ngIf="showname">My name is : {{myname}}</p> 
+
+
+<div class="container d-flex flex-wrap">
+    <div class="card m-3" style="width: 18rem;" *ngFor="let i of products">
+        <img [src]="i.image" class="card-img-top imgstl" alt="product-image">
+        <div class="card-body">
+            <h5 class="card-title" [ngClass]="i.price<50 ? 'sale' : ''">{{i?.title}}</h5>
+            <p class="card-text" [ngStyle]="{'background-color': i.price<50 ? '#52529d8f' : ''}">$ {{i?.price}}</p>
+            <p class="card-text">rating : {{i?.rating.rate}} - 5</p>
+            <div class="d-flex justify-content-between">
+                <span class="bg-secondary" *ngIf="i.sale">on sale</span>
+                <span class="bg-primary" *ngIf="i?.saleamount>0">%{{i.saleamount}}</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

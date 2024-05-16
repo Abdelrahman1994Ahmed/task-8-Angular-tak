@@ -3,3 +3,7 @@
     object-position: center;
     object-fit: contain;
 }
+.sale{
+    background-color: chocolate;
+    font-family: sans-serif;
+}
